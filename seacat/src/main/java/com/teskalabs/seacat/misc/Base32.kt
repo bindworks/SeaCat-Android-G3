@@ -28,7 +28,7 @@ class Base32 protected constructor(private val ALPHABET: String) {
         s = s.replaceFirst("[=]*$".toRegex(), "")
 
         // Canonicalize to all upper case
-        s = s.toUpperCase()
+        s = s.uppercase()
         if (s.length == 0) {
             return ByteArray(0)
         }
